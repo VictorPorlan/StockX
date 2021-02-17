@@ -1,7 +1,9 @@
 package edu.pingpong.StockX;
 
-import edu.pingpong.StockX.item.Item;
-import edu.pingpong.StockX.item.Sneaker;
+import edu.pingpong.StockX.criteria.Asks;
+import edu.pingpong.StockX.criteria.Bids;
+import edu.pingpong.StockX.criteria.Criteria;
+import edu.pingpong.StockX.item.*;
 
 public class Stockx {
 
@@ -24,20 +26,20 @@ public class Stockx {
          * y añadirlas a la zapatilla
          * en sus offers.
          */
-/*
+
         Bid bid = new Bid("13", 550);
         sneaker.add(bid);
         sneaker.add(new Bid("6", 200));
         sneaker.add(new Bid("9.5", 479));
         sneaker.add(new Bid("13", 338));
         sneaker.add(new Bid("9.5", 480));
-/*
+
         /**
          * Crear asks
          * y añadirlas a la zapatilla
          * en sus offers.
          */
-/*
+
         Ask ask = new Ask("13", 288);
         sneaker.add(ask);
         sneaker.add(new Ask("6", 600));
@@ -50,7 +52,7 @@ public class Stockx {
          * solo las bids de entre las
          * offers de la zapatilla.
          */
-/*
+
         Criteria bids = new Bids();
         System.out.println("\n\t\t All BIDS");
         bids.checkCriteria(sneaker).forEach(System.out::print);
@@ -60,7 +62,7 @@ public class Stockx {
          * solo las asks de entre las
          * offers de la zapatilla.
          */
-/*
+
         Criteria asks = new Asks();
         System.out.println("\n\t\t All ASKS");
         asks.checkCriteria(sneaker).forEach(System.out::print);

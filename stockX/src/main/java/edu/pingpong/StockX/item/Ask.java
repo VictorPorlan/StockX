@@ -1,25 +1,16 @@
 package edu.pingpong.StockX.item;
 
-public class Bid implements Offer{
+public class Ask implements Offer{
     private String size;
-    private Integer bid;
-
-    public Bid(String size, Integer bid) {
+    private Integer ask;
+    public Ask(String size, Integer ask){
         this.size = size;
-        this.bid = bid;
-    }
-    public String getSize() {
-        return size;
-    }
-
-    public Integer getBid() {
-        return bid;
+        this.ask = ask;
     }
     @Override
     public String toString(){
         return "\n\t\t"+ size() +"\t\t"+ value();
     }
-
     @Override
     public String size() {
         return this.size;
@@ -27,6 +18,6 @@ public class Bid implements Offer{
 
     @Override
     public int value() {
-        return this.bid;
+        return this.ask;
     }
 }

@@ -1,5 +1,6 @@
 package edu.pingpong.StockX.item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sneaker implements Item{
@@ -8,6 +9,8 @@ public class Sneaker implements Item{
     private int sale;
     private int ask;
     private int bid;
+
+    private List<Offer> offers = new ArrayList<Offer>();
 
     public Sneaker(String style, String name){
         this.style = style;
@@ -32,12 +35,12 @@ public class Sneaker implements Item{
 
     @Override
     public void add(Offer offer) {
-
+        this.offers.add(offer);
     }
 
     @Override
     public List<Offer> offers() {
-        return null;
+        return this.offers;
     }
 
     public int getBid() {
@@ -58,5 +61,7 @@ public class Sneaker implements Item{
     @Override
     public String toString(){
         return getName() + " " + getStyle();
+
     }
+
 }
